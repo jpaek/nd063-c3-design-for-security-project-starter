@@ -1,3 +1,9 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
+GuardDuty found that the I launched a brute force attack from the attacker instance to the 
+web service instance by trying to guess the password of the web service instance's root account
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+According to AWS GuardDuty documentation, GuardDuty analyzes tens of billions of events across multiple AWS data sources, 
+such as AWS CloudTrail event logs, Amazon VPC Flow Logs, and DNS logs.
+
+For this specific attack, I believe it used the CloudTrail log to identify the attack.

@@ -1,0 +1,2 @@
+* Configuration of the unsecure EC2 instance.
+* Using IAM API Key to upload the file.

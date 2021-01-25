@@ -1,8 +1,14 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+* Disable SSH root account logins in the application server
+* Use federate authentication for the privileged users to upload objets into S3 bucket.
+* Enable SSM to manager EC2 instances
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+As VPC private endpoints only forwards the traffic between S3 bucket and resources within the VPC, if the IAM permission is still allowing the access to resources outside of VPC, this wouldn't address the problem.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, this will only encrypt the new objects.
 
 # What would happen if the original cloud formation templates are applied to this environment.
+It will override the setting and disable the default encryption.

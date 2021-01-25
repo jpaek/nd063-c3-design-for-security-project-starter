@@ -1,13 +1,25 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+* For terraform, there are number of static code analysis.  These includes Checkov, TFLint, Terrafirma and Accurics.
 
 ### Example vulnerability
+* Credentials hard coded into terraform.
+* IAM Policy granting full administrative privileges
+* Encryption is enabled in the EBS
 
 ##Scan AMI’s or containers for OS vulnerabilities
+* For ECR cluster, you can use Amazon ECR image scanning to scan for vulnerabilities in your container images.  It uses Clair container scanner.
 
 ### Example vulnerability
+* Cryptojacking (injection of malicious scripts to steal device's computational resources for mining cryptocurrencies)
+* Malicious open-source images
+* Static docker files
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+* You can use AWS Config to scan for vulnerabilities in your cloud configuration.
 
 ### Example vulnerability
+* IAM user password does not have expiration
+* IAM user does not have MFA enforced
+* EC2 instances are not managed by the SSM

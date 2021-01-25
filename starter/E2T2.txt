@@ -1,3 +1,33 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+
+From AWS Config:
+securityhub-vpc-flow-logs-enabled-affd5174
+securityhub-s3-bucket-logging-enabled-45615892
+securityhub-restricted-ssh-d1f957fd
+securityhub-restricted-rdp-c5a32b0c	
+securityhub-vpc-flow-logs-enabled-fd34d1d0
+securityhub-iam-user-no-policies-check-a49b1e2c
+securityhub-encrypted-volumes-991febf5
+securityhub-iam-support-policy-in-use-74249b47
+securityhub-ec2-ebs-encryption-by-default-6da6a714
+
+From Security Hub:
+ Failed	High	CIS.4.1	Ensure no security groups allow ingress from 0.0.0.0/0 to port 22	
+ Failed	High	CIS.2.1	Ensure CloudTrail is enabled in all regions	
+ Failed	High	CIS.4.2	Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389	
+ Failed	Medium	CIS.2.9	Ensure VPC flow logging is enabled in all VPCs	
+ Failed	Low	CIS.1.16	Ensure IAM policies are attached only to groups or roles	
+ Failed	Low	CIS.1.10	Ensure IAM password policy prevents password reuse	
+ Failed	Low	CIS.1.11	Ensure IAM password policy expires passwords within 90 days or less	
+ Failed	Low	CIS.1.20	Ensure a support role has been created to manage incidents with AWS Support
+
+From Inspector:
+On instance i-057c618e894afa034, TCP port 20 which is associated with 'FTP' is reachable from the internet
+On instance i-057c618e894afa034, TCP port 23 which is associated with 'Telnet' is reachable from the internet
+On instance i-057c618e894afa034, UDP port 23 which is associated with 'Telnet' is reachable from the internet
+On instance i-057c618e894afa034, UDP port 21 which is associated with 'FTP' is reachable from the internet
+On instance i-057c618e894afa034, UDP port 20 which is associated with 'FTP' is reachable from the internet
+On instance i-057c618e894afa034, TCP port 21 which is associated with 'FTP' is reachable from the internet
