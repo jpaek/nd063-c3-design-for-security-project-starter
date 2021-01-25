@@ -1,8 +1,5 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
-Bonus - provide recommendations on how to remediate the vulnerabilities.
-
-
 From AWS Config:
 securityhub-vpc-flow-logs-enabled-affd5174
 securityhub-s3-bucket-logging-enabled-45615892
@@ -31,3 +28,7 @@ On instance i-057c618e894afa034, UDP port 23 which is associated with 'Telnet' i
 On instance i-057c618e894afa034, UDP port 21 which is associated with 'FTP' is reachable from the internet
 On instance i-057c618e894afa034, UDP port 20 which is associated with 'FTP' is reachable from the internet
 On instance i-057c618e894afa034, TCP port 21 which is associated with 'FTP' is reachable from the internet
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+* Modify the security group to be more restrictive (i.e. restrict the IP addresses that can connect)
