@@ -2,7 +2,7 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
-# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
-* Restrict the IP ranges from which to login to the EC2 instance.
-* The password should not have been enabled for SSH in the EC2 instance.
+# Neither instance should have had access to the secret recipes bucket, in the event that instance API credentials were compromised how could we have prevented access to sensitive data.
+* Do not allow any inbound access to the EC2 instance (i.e. remove inbound rules allowing inbound access to port 22 from security group and the instance itself)
+* Allow user only to SSH into the EC2 instance using AWS Systerm Manager and instance profile role. 
 
